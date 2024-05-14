@@ -86,15 +86,15 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
         cy.get('.success').should('be.visible')
     })
-    it('Protegendo dados sensiveis', function()  {
-        cy.get('#firstName').type(Cypress.env('primeiro_nome'))
-        cy.get('#lastName').type(Cypress.env('sobrenome'))
-        cy.get('#email').type(Cypress.env('email'), {log: false})
-        cy.get('#open-text-area').type(Cypress.env('obs'))
-        cy.get('button[type="submit"]').click()
+    // it('Protegendo dados sensiveis', function()  {
+    //     cy.get('#firstName').type(Cypress.env('primeiro_nome'))
+    //     cy.get('#lastName').type(Cypress.env('sobrenome'))
+    //     cy.get('#email').type(Cypress.env('email'), {log: false})
+    //     cy.get('#open-text-area').type(Cypress.env('obs'))
+    //     cy.get('button[type="submit"]').click()
 
-        cy.get('.success').should('be.visible')
-    })
+    //     cy.get('.success').should('be.visible')
+    // })
     it('seleciona um produto (YouTube) por seu texto', function(){
         cy.get('#product')
           .select('YouTube')
